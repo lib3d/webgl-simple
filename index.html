@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="x-shader/x-vertex" id="vs">
+    precision mediump float;
+    attribute vec3 aPos;
+    attribute vec4 aColor;
+    varying vec4 color;
+    void main() {
+      color = aColor;
+      gl_Position = vec4(aPos,1.0);
+    }</script>
+<script type="x-shader/x-fragment" id="fs">
+    precision mediump float;
+    varying vec4 color;
+    void main() {
+      gl_FragColor = vec4(color);
+    }</script>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script type="text/javascript" src="WebGLSimple.js"></script>
+<script type="text/javascript" src="WebGLSimple.utils.js"></script>
+<script type="text/javascript" src="WebGLSimple.Material.js"></script>
+<script type="text/javascript" src="WebGLSimple.BasicMaterial.js"></script>
+<script type="text/javascript" src="WebGLSimple.Shape.js"></script>
+<script type="text/javascript" src="WebGLSimple.Group.js"></script>
+<script type="text/javascript" src="WebGLSimple.Scene.js"></script>
+<script type="text/javascript" src="WebGLSimple.Renderer.js"></script>
+<script type="text/javascript" src="WebGLSimple.WebGLRenderer.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
